@@ -1,0 +1,24 @@
+{
+	"name":"PackshotHub"
+,	"providers":["facebook/packshothub"]
+,	"email":"info@packshothub.com"
+,	"url":"http://www.packshothub.com"
+,	"analytics":false
+,	"albums":[
+		{
+			"provider":"facebook"
+		,	"selector":false
+		,	"field":"description"
+		,	"sortBy":"title"
+		}
+	]
+,	"info":"facebook"
+,	"location":"facebook"
+,	"colors":{
+		"color_accent_main": "#D17150"
+	,	"color_accent_second": "#D17150"
+	,	"color_background": "#F6F5E2"
+	}
+,	"template":"simple"
+,	"showLogoTitle":false
+}
