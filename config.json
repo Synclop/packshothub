@@ -18,7 +18,9 @@
 		"color_accent_main": "#D17150"
 	,	"color_accent_second": "#D17150"
 	,	"color_background": "#F6F5E2"
+	,	"color_background_images":"#FFFFFF"
 	}
 ,	"template":"simple"
+,	"albumsDefaultView":"contain"
 ,	"showLogoTitle":false
 }
