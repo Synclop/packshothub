@@ -7894,7 +7894,8 @@ module.exports = function(app) {
 	//hand-made currying ftw
 	var scrollPageContainer = function(containerId,prefix,property,dimension,address,refresh){
 		var container = app.dom(containerId)
-		,	scrollPageContainerOnAxisToAddress = function(dimension,address,refresh){
+		if(!container){return false;}
+		var	scrollPageContainerOnAxisToAddress = function(dimension,address,refresh){
 				dimension = - dimension;
 				var opts = {}
 				,	scrollPageContainerToAddress = function(address,refresh){
@@ -7931,7 +7932,7 @@ module.exports = function(app) {
 	var refreshFunctions = function(){
 		var textDim = app.dimensions.text.width;
 		var displayDim = app.dimensions.display.height;
-		scrollTextPageContainer = _scrollTextPageContainer(textDim);
+		_scrollTextPageContainer & _scrollTextPageContainer(textDim);
 		scrollDisplayPageContainer = _scrollDisplayPageContainer(displayDim);
 	};
 
@@ -7943,7 +7944,7 @@ module.exports = function(app) {
 	var scrollToAddress = function(address,refresh){
 		lastAddress = address;
 		if(!scrollTextPageContainer){refreshFunctions();}
-		scrollTextPageContainer(address,refresh);
+		scrollTextPageContainer & scrollTextPageContainer(address,refresh);
 		scrollDisplayPageContainer(address,refresh);
 	};
 
