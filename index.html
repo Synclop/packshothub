@@ -7932,7 +7932,7 @@ module.exports = function(app) {
 	var refreshFunctions = function(){
 		var textDim = app.dimensions.text.width;
 		var displayDim = app.dimensions.display.height;
-		_scrollTextPageContainer & _scrollTextPageContainer(textDim);
+		_scrollTextPageContainer && _scrollTextPageContainer(textDim);
 		scrollDisplayPageContainer = _scrollDisplayPageContainer(displayDim);
 	};
 
@@ -7944,7 +7944,7 @@ module.exports = function(app) {
 	var scrollToAddress = function(address,refresh){
 		lastAddress = address;
 		if(!scrollTextPageContainer){refreshFunctions();}
-		scrollTextPageContainer & scrollTextPageContainer(address,refresh);
+		scrollTextPageContainer && scrollTextPageContainer(address,refresh);
 		scrollDisplayPageContainer(address,refresh);
 	};
 
